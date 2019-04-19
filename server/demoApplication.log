@@ -1,0 +1,6 @@
+[main] ERROR serverapp.db.DataBaseConnectionPool  - connection with database wasn't found
+[main] ERROR serverapp.db.DataBaseConnectionPool  - connection with database wasn't found
+[main] ERROR serverapp.db.DataBaseConnectionPool  - connection with database wasn't found
+[main] ERROR serverapp.db.DataBaseConnectionPool  - The server time zone value 'Áåëàðóñü (çèìà)' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configuration property) to use a more specifc time zone value if you want to utilize time zone support.
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool

@@ -1,0 +1,107 @@
+[main] INFO  serverapp.Server  - str
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] WARN  serverapp.DataBaseController  - Before start of result set
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] WARN  serverapp.DataBaseController  - Before start of result set
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] WARN  serverapp.DataBaseController  - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null' at line 1
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] WARN  serverapp.DataBaseController  - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''stud'' at line 1
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] WARN  serverapp.DataBaseController  - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''stud'' at line 1
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] WARN  serverapp.DataBaseController  - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '? (
+                                 s_id          INT           NOT NULL    AUT' at line 1
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] INFO  serverapp.DataBaseController  - New table is created
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] WARN  serverapp.DataBaseController  - can't add student to table Parameter index out of range (1 > number of parameters, which is 0).
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] WARN  serverapp.DataBaseController  - Can't get programming languages Table 'students.$tablename' doesn't exist
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] INFO  serverapp.DataBaseController  - add student to table stud
+[main] INFO  serverapp.DataBaseController  - add student to table stud
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] INFO  serverapp.DataBaseController  - add student to table stud
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] WARN  serverapp.DataBaseController  - Can't get programming languages  becauseYou have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Connection pool is inited
+[main] INFO  serverapp.db.DataBaseConnectionPool  - Take connection from connection pool
