@@ -11,11 +11,11 @@ public class ClientSocketProcess implements Runnable {
     private static  final Logger LOGGER = LogManager.getLogger(ClientSocketProcess.class);
     private Socket socket;
     private String currentTable;
-    private Connection connection;
-
-    public ClientSocketProcess(Socket socket, Connection connection) {
+    private DataBaseController controller;
+    
+    public ClientSocketProcess(Socket socket, DataBaseController controller) {
         this.socket = socket;
-        this.connection = connection;
+        this.controller = controller;
     }
 
     @Override
