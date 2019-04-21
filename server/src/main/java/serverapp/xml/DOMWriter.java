@@ -1,5 +1,7 @@
 package serverapp.xml;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import serverapp.entity.Name;
@@ -16,7 +18,9 @@ import javax.xml.transform.stream.StreamResult;
 import java.io.File;
 import java.util.List;
 
+
 public class DOMWriter {
+    public static final Logger LOGGER = LogManager.getLogger(DOMWriter.class);
     private Document document;
 
     private final String STUDENTS = "students";
@@ -53,9 +57,9 @@ public class DOMWriter {
             StreamResult streamResult = new StreamResult(result);
             transformer.transform(domSource, streamResult);
         } catch (ParserConfigurationException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         } catch (TransformerException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         }
         return null;
     }

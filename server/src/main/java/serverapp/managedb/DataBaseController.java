@@ -1,11 +1,10 @@
-package serverapp;
+package serverapp.managedb;
 
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import serverapp.entity.Name;
 import serverapp.entity.Student;
-import serverapp.managedb.TypeOfSelection;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -47,6 +46,8 @@ public class DataBaseController {
     private final String SELECT_BY_NUM_OF_TASK = "SELECT * FROM $tableName WHERE TOTAL_TASK = ?";
     private final String SELECT_BY_COURSE_OR_PROG_LANG ="SELECT * FROM $tableName WHERE COURSE = ? OR PROG_LANG = ?";
     private final String SELECT_BY_NUM_OF_UNDONE_TASK = "SELECT * FROM $tableName WHERE TOTAL_TASK - DONE_TASK = ?";
+    private final String SELECT_IN_RANGE ="SELECT * FROM $tableName WHERE s_id > ? AND s_id < ?";
+    private final String RECORDS_COUNT = "SELECT COUNT(S_ID) FROM $tableName";
 
 
     public DataBaseController(Connection connection) {
@@ -243,6 +244,38 @@ public class DataBaseController {
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage());
         }
+    }
+
+    public List<Student> getPage(int pageSize, int pageNum) {
+        List<Student> resultList = null;
+        try{
+            String query = replaceTableName(SELECT_IN_RANGE, currentTableName);
+            PreparedStatement statement = connection.prepareStatement(query);
+            int startId = pageSize * pageNum;
+            int endId = pageSize *(pageNum + 1);
+            statement.setInt(1, startId);
+            statement.setInt(2, endId);
+            ResultSet resultSet = statement.executeQuery();
+            resultList = studentListFromResultSet(resultSet);
+            return resultList;
+        } catch (SQLException e) {
+            LOGGER.warn("can't take students page because" + e.getMessage());
+        }
+        return  resultList;
+    }
+
+    public int getRecordsNum() {
+        int recordsNum = 0;
+        try{
+            String query  = replaceTableName(RECORDS_COUNT, currentTableName);
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(query);
+            resultSet.next();
+            recordsNum =resultSet.getInt("COUNT('S_ID')");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return recordsNum;
     }
 }
 

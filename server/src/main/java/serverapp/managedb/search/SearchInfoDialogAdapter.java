@@ -4,7 +4,7 @@ import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.ToolItem;
-import serverapp.DataBaseController;
+import serverapp.managedb.DataBaseController;
 
 public class SearchInfoDialogAdapter extends SelectionAdapter {
     private DataBaseController dataBaseController;

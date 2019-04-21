@@ -7,7 +7,6 @@ import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
-import serverapp.DataBaseController;
 import serverapp.viewcomponents.FormManipulator;
 
 import static serverapp.managedb.TypeOfSelection.getTypeByNumber;

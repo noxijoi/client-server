@@ -9,31 +9,35 @@ import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
-import org.eclipse.swt.widgets.*;
+import org.eclipse.swt.widgets.Button;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Shell;
+import org.eclipse.swt.widgets.Text;
 import serverapp.db.DataBaseConnectionPool;
-import serverapp.entity.Student;
+import serverapp.managedb.DataBaseController;
 import serverapp.managedb.DataBaseManageDialog;
 import serverapp.viewcomponents.FormManipulator;
 
-import java.sql.Connection;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.sql.Connection;
+import java.util.ResourceBundle;
 
 public class ServerApp {
     private static final Logger LOGGER = LogManager.getLogger(ServerApp.class);
 
     private DataBaseController controller;
-    private String port = "unknown";
+    private final String serverProp = "server";
     private Shell shell;
     private Text logArea;
     private Connection connection;
     private Server mainServer;
 
+
     public ServerApp(){
         Display display = new Display();
         shell = createShell(display);
-        mainServer = new Server();
-        //это нормально вообще? выглядит как дичь
+
         connection = DataBaseConnectionPool.getInstance().getConnection();
         controller = new DataBaseController(connection);
         shell.pack();
@@ -61,7 +65,14 @@ public class ServerApp {
         runServerButton.addSelectionListener(new SelectionAdapter() {
             @Override
             public void widgetSelected(SelectionEvent selectionEvent) {
-                mainServer.start();
+
+                if(mainServer == null){
+                    mainServer = new Server();
+                    mainServer.start();
+                } else {
+                    mainServer.setWorkingFlag(true);
+                }
+
             }
         });
         runServerButton.setLayoutData(buttonGridData);
@@ -69,7 +80,7 @@ public class ServerApp {
         stopServerButton.addSelectionListener(new SelectionAdapter() {
             @Override
             public void widgetSelected(SelectionEvent selectionEvent) {
-                mainServer.stop();
+                mainServer.setWorkingFlag(false);
             }
         });
         stopServerButton.setLayoutData(buttonGridData);
@@ -82,19 +93,19 @@ public class ServerApp {
         textAreaGridData.grabExcessVerticalSpace = true;
         textAreaGridData.horizontalAlignment = GridData.FILL;
         textAreaGridData.verticalAlignment = GridData.FILL;
-        logArea = new Text(shell, SWT.MULTI | SWT.READ_ONLY |SWT.BORDER);
+        logArea = new Text(shell, SWT.MULTI | SWT.READ_ONLY |SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);
         logArea.setVisible(true);
         logArea.setBackground(new Color(display, 255, 255,255));
         logArea.setLayoutData(textAreaGridData);
 
-        Button toDataManageButton = FormManipulator.createButton(shell,"Manage Data Base");
+        Button toDataManageButton = FormManipulator.createButton(shell,"Manage Database");
         toDataManageButton.addSelectionListener(new SelectionAdapter() {
             @Override
             public void widgetSelected(SelectionEvent selectionEvent) {
                 new DataBaseManageDialog(shell, connection);
             }
         });
-        String serverIP ;
+        String serverIP;
         try {
             serverIP = InetAddress.getLocalHost().getHostAddress();
         } catch (UnknownHostException e) {
@@ -103,19 +114,16 @@ public class ServerApp {
 
         }
         new Text(shell, SWT.READ_ONLY | SWT.SINGLE).setText("Server IP: "+ serverIP);
+
+        ResourceBundle bundle = ResourceBundle.getBundle(serverProp);
+        String port = bundle.getString("server.port");
         new Text(shell, SWT.READ_ONLY | SWT.SINGLE).setText("Port №" + port);
 
-
         return shell;
     }
 
-    public void onNewRecord(Student student) {
+    public void displayLog(String logMessage){
+        logArea.append(logMessage);
     }
 
-    public Shell getShell() {
-        return shell;
-    }
-
-    public void update() {
-    }
 }

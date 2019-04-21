@@ -1,4 +1,4 @@
-package serverapp.addrecord;
+package serverapp.managedb.addrecord;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -8,7 +8,7 @@ import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
-import serverapp.DataBaseController;
+import serverapp.managedb.DataBaseController;
 import serverapp.entity.Name;
 import serverapp.entity.Student;
 import serverapp.viewcomponents.FormManipulator;

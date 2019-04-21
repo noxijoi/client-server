@@ -11,8 +11,7 @@ import java.sql.Connection;
 import java.util.Arrays;
 
 import org.eclipse.swt.widgets.*;
-import serverapp.DataBaseController;
-import serverapp.addrecord.AddDialog;
+import serverapp.managedb.addrecord.AddDialog;
 import serverapp.managedb.delete.DeleteDialog;
 import serverapp.managedb.search.SearchDialog;
 import serverapp.viewcomponents.FormManipulator;

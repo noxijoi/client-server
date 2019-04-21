@@ -3,7 +3,7 @@ package serverapp.managedb.delete;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.*;
-import serverapp.DataBaseController;
+import serverapp.managedb.DataBaseController;
 import serverapp.managedb.ComboTypeAdapter;
 import serverapp.viewcomponents.TableComponent;
 
